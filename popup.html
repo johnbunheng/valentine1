@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body{
+            background-color: papayawhip;
+        }
+        .container{
+            position: fixed;
+            display: none;
+            width: 400px;
+            height: auto;
+            border-radius: 15px;
+            background-image: url(img/st\,small\,507x507-pad\,600x600\,f8f8f8.webp);
+        }
+        .container > .header_pop{
+            padding: 0px 10px;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            color: deeppink;
+        }
+        .container > .header_pop h3{
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .container > .body_pop img{
+            width: 200px;
+            margin-left: 100px;
+        }
+        .container > .body_pop p{
+            padding: 0px 10px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: deeppink;
+        }
+        .pop{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 300px;
+        }
+        .pop > [type="button"]{
+            padding: 10px 30px;
+            border: 2px solid rgb(153, 0, 82);
+            border-radius: 15px;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            cursor: pointer;
+            color: aliceblue;
+            background-color: deeppink;
+        }
+        .pop > [type="button"]:hover{
+            color: deeppink;
+            background-color: rgb(226, 130, 182);
+        }
+        .open{
+            display: block;
+        }
+        .pop > .pic{
+            position: absolute;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="pop">
+        <img class="pic" src="img/main.png" alt="">
+        <input id="btn" type="button" value="Open Please😊">
+        <div class="container">
+            <div class="header_pop">
+                <h3>Happy Valentine's day [SORN]</h3>
+                <i id="concel" class="fa-solid fa-xmark" style="cursor: pointer;font-size: 25px;"></i>
+            </div>
+            <hr>
+            <div class="body_pop">
+                <p>“Happy Valentine's Day! Wishing you a day filled with love, laughter, and all the things that make you happy. 🌸 You are an amazing friend and a joy to have in my life. Enjoy this special day with family and friends! 💖”</p>
+                <img src="img/a2f3e2e6-296b-46d8-9526-d75caba371ae.png" alt="">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var btn = document.getElementById("btn");
+    var pop = document.querySelector(".container");
+    var concel = document.getElementById("concel");
+    btn.addEventListener("click",function(){
+        pop.classList.add("open");
+    })
+    concel.addEventListener("click",function(){
+        pop.classList.remove("open");
+    })
+</script>
+</html>
